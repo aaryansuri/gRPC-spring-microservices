@@ -1,16 +1,7 @@
 # gRPC-spring
 
-JSON : 3276 ms
-PROTO : 505 ms
+1. serialization and deserialization test = JSON : 3276 ms PROTO : 505 ms
 
-JSON : 2300 ms
-PROTO : 413 ms
+2. protoc --js_out=./ person.proto generate language class ex proto files
 
-JSON : 2310 ms
-PROTO : 416 ms
 
-JSON : 2333 ms
-PROTO : 443 ms
-
-JSON : 2342 ms
-PROTO : 417 ms
