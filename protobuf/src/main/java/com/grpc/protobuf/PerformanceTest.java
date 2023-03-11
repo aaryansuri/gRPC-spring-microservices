@@ -37,15 +37,17 @@ public class PerformanceTest {
             }
         };
 
-        runTest(jsonRun, "JSON");
-        runTest(protoRun, "PROTO");
+        for (int i = 0; i < 5; i++) {
+            runTest(jsonRun, "JSON");
+            runTest(protoRun, "PROTO");
+        }
 
     }
 
     private static void runTest(Runnable runnable, String method) {
         long timeStart = System.currentTimeMillis();
 
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < 5_000_000; i++) {
             runnable.run();
         }
 
