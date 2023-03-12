@@ -14,16 +14,23 @@ public class CompositionDemo {
                 .setCity("Atlanta")
                 .build();
 
-        Car car = Car.newBuilder()
+        Car car1 = Car.newBuilder()
                 .setCompany("Honda")
                 .setModel("Civic")
                 .setYear(2005)
                 .build();
 
+        Car car2 = Car.newBuilder()
+                .setCompany("Honda")
+                .setModel("Accord")
+                .setYear(2020)
+                .build();
+
         Person person = Person.newBuilder()
                 .setName("Sam")
                 .setAge(25)
-                .setCar(car)
+                .addCar(car1)
+                .addCar(car2)
                 .setAddress(address)
                 .build();
 
