@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "com.grpc.models";
+
+message Car {
+  string company = 1;
+  string model = 2;
+  int32 year = 3;
+  BodyStyle style = 4;
+}
+
+enum BodyStyle {
+  UNKNOWN = 0;
+  SEDAN = 1;
+  HATCHBACK = 2;
+  SUV = 3;
+}
